@@ -5,3 +5,9 @@ personal uebersicht config
 ** screenshot
 
 [[./screenshot.png]]
+
+* requirements
+
+these widgets require [[https://github.com/arnm/system][arnm/system]] graphql server to be running
+
+
