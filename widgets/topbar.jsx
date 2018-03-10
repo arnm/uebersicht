@@ -42,6 +42,10 @@ function batteryComponent(battery) {
 
     const { ischarging, percent } = battery;
 
+    if (percent === 0) {
+        return <div/>;
+    }
+
     const elements = [];
 
     if (ischarging) {
@@ -111,12 +115,17 @@ function statusComponent(system) {
         {time}
     </div>;
 
-    const wifiIcon = <div className='pt-1' style={styles.icon}></div>;
-    const wifiNetwork = system.wifi.length === 0 ? 'wired' : system.wifi[0].ssid;
-    const wifiComponent = <div className='d-flex justify-content-start mr-3'>
-        {wifiIcon}
-        <div className='p-1' style={styles.text}>{wifiNetwork}</div>
-    </div>;
+    let wifiComponent;
+    if (system.wifi.length === 0) {
+        wifiComponent = <div/>;
+    } else {
+        const wifiIcon = <div className='pt-1' style={styles.icon}></div>;
+        const wifiNetwork = system.wifi.length === 0 ? 'wired' : system.wifi[0].ssid;
+        wifiComponent = <div className='d-flex justify-content-start mr-3'>
+            {wifiIcon}
+            <div className='p-1' style={styles.text}>{wifiNetwork}</div>
+        </div>;
+    }
 
     const battery = batteryComponent(system.battery);
 
