@@ -10,7 +10,7 @@ export const command = `echo '${JSON.stringify(query)}' | http --json :3000/grap
 const barStyle = {
     backgroundColor: 'rgba(20, 20, 20, 0.85)',
     color: '#a5a5a5',
-    font: '15px Iosevka Nerd Font',
+    font: '15px FuraCode Nerd Font',
     fontWeight: '700',
     color: '#aaa',
     '-webkit-font-smoothing': 'antialiased'

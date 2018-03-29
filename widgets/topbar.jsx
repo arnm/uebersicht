@@ -93,8 +93,8 @@ const styles = {
     bar: {
         backgroundColor: 'rgba(20, 20, 20, 0.85)',
         color: '#aaa',
-        font: '16px Iosevka Nerd Font',
-        fontWeight: '700',
+        font: '16px FuraCode Nerd Font',
+        fontWeight: '600',
         color: '#aaa',
         '-webkit-font-smoothing': 'antialiased',
     }
